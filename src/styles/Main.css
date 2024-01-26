@@ -1,0 +1,71 @@
+.body {
+  background-color: blue;
+}
+.firstTextCustom {
+  color: #212836;
+  font-size: 28px;
+  font-weight: 800;
+}
+.colorCustomText {
+  color: #4D50F4;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.buttonSubmitCustom {
+  height: 53px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #4D50F4;
+  border: 2px
+}
+.customProgressBar {
+  height: 4px;
+}
+.progress-bar  {
+  background-color: #4D50F4;
+}
+.informationConfirmation {
+  color: #4D50F4;
+  font-size: 28px;
+  font-weight: 800;
+}
+.customInput {
+  height: 53px;
+  border-radius: 10px;
+  border: 2px solid #4D50F4;
+}
+.confirmationTextlabel {
+   font-size:14px;
+   font-weight: 500;
+   color: #7F8590;
+}
+.textFormValue {
+  font-weight: 500;
+  font-size: 16px;
+  color: #212836;
+}
+.buttonSubmitCustom[disabled] {
+ background-color: #EDEEFE;
+ color: #CACBFC
+}
+.app-container {
+  background-color: #F4EADF;
+  min-height:100vh;
+}
+.custom-list-group {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.custom-list-group-item {
+  border: none;
+}
+.suggestionHover:hover {
+  background-color: #EDEEFE; 
+  cursor: pointer;
+}
+.cardCustom {
+  border-radius: 10px;
+}
+.informationTextColor {
+  color: #4D50F4;
+}
