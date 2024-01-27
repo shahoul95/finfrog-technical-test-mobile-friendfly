@@ -12,6 +12,7 @@ import arrow from '../src/assets/images/Arrow.svg'
 import Image from 'react-bootstrap/Image';
 import * as actions from '../src/store/actions/formAction';
 import '../src/styles/Main.css'
+import { stepMapping } from './utils/mappingStep';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -21,14 +22,6 @@ const App: React.FC = () => {
 
   const stepForms = ["formLastNameStep", "addressMailStep", "phoneNumberStep", "addressStep", "confirmationStep"];
   const iStepArrow = stepForms.includes(step)
-  
-  const stepMapping: any = {
-    "formLastNameStep": { step: "formFirstNameStep", percentage: 20 },
-    "addressMailStep": { step: "formLastNameStep", percentage: 40 },
-    "phoneNumberStep": { step: "addressMailStep", percentage: 60 },
-    "addressStep": { step: "phoneNumberStep", percentage: 80 },
-    "confirmationStep": { step: "addressStep", percentage: 90 },
-  };
 
   const handleArrowClick = () => {
     const stepPrevious = stepMapping[step].step;
@@ -48,7 +41,7 @@ const App: React.FC = () => {
           </Col>
           <Col xs={!iStepArrow ? "12" : "11"}>
             {step !== 'confirmationStep' && (
-              <ProgressBar className="customProgressBar"  now={progressBarPercent} />
+              <ProgressBar className="customProgressBar" now={progressBarPercent} />
             )}
           </Col>
         </Row>
