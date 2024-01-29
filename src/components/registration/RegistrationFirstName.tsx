@@ -20,7 +20,7 @@ const RegistrationFirstName: React.FC = () => {
             dispatch(actions.updateStepFormFirstName(false));
         } else {
             dispatch(actions.updateFirstName(e.target.value));
-            const isFirstName = regexFirstNameAndLastName.test(firstName);
+            const isFirstName = regexFirstNameAndLastName.test(newFirstNameValue);
             dispatch(actions.updateStepFormFirstName(isFirstName));
         }
     };
