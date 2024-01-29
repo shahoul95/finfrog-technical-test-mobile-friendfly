@@ -20,7 +20,7 @@ const RegistrationPhoneNumber: React.FC = () => {
             dispatch(actions.updateStepFormPhoneNumber(false));
         } else {
             dispatch(actions.updatePhoneNumber(newPhoneValue));
-            const isPhoneNumber = regexPhoneNumber.test(phoneNumber);
+            const isPhoneNumber = regexPhoneNumber.test(newPhoneValue);
             dispatch(actions.updateStepFormPhoneNumber(isPhoneNumber));
         }
     };
