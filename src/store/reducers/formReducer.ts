@@ -1,5 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 import * as actions from '../actions/formAction';
+import { FormStep } from '../../types/enums/formStep';
+import { ProgressBarPercentage } from '../../types/enums/progressBarPercentage';
 
 interface FormState {
   firstName: string;
@@ -7,7 +9,7 @@ interface FormState {
   address: string;
   phoneNumber: string;
   email: string;
-  step: string
+  step: FormStep;
   progressBarPercent: number;
   isStepFormFirstName: boolean;
   isStepFormLastName: boolean;
@@ -22,8 +24,8 @@ const initialState: FormState = {
   email: '',
   phoneNumber: '',
   address: '',
-  step: "formFirstNameStep",
-  progressBarPercent: 20,
+  step: FormStep.FirstName,
+  progressBarPercent: ProgressBarPercentage.Twenty,
   isStepFormFirstName: false,
   isStepFormLastName: false,
   isStepFormMail: false,

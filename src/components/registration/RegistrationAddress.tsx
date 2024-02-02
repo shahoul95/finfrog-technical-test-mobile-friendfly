@@ -6,6 +6,7 @@ import * as actions from '../../store/actions/formAction';
 import { useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 import '../../styles/Main.css'
+import { FormStep } from '../../types/enums/formStep';
 
 const RegistrationAddress: React.FC = () => {
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ const RegistrationAddress: React.FC = () => {
 
 
   const handleInputChangeAddress = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = e.target.value;
-    dispatch(actions.updateAddress(inputValue));
+    const newAddresstValue = e.target.value;
+    dispatch(actions.updateAddress(newAddresstValue));
 
     try {
       if (address.length >= 4) {
@@ -35,7 +36,7 @@ const RegistrationAddress: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    dispatch(actions.updateStep('confirmationStep'));
+    dispatch(actions.updateStep(FormStep.Confirmation));
   };
 
   const handleSelectSuggestion = (selectedSuggestion: string) => {

@@ -5,6 +5,8 @@ import { RootState } from '../../store';
 import * as actions from '../../store/actions/formAction';
 import '../../styles/Main.css'
 import { regexFirstNameAndLastName } from '../../utils/formRegex'
+import { FormStep } from '../../types/enums/formStep';
+import { ProgressBarPercentage } from '../../types/enums/progressBarPercentage';
 
 const RegistrationLastName: React.FC = () => {
   const dispatch = useDispatch();
@@ -26,8 +28,8 @@ const RegistrationLastName: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    dispatch(actions.updateStep('addressMailStep'));
-    dispatch(actions.updateProgressBar(60));
+    dispatch(actions.updateStep(FormStep.AddressMail));
+    dispatch(actions.updateProgressBar(ProgressBarPercentage.Sixty));
   };
 
   return (

@@ -13,6 +13,7 @@ import Image from 'react-bootstrap/Image';
 import * as actions from '../src/store/actions/formAction';
 import '../src/styles/Main.css'
 import { stepMapping } from './utils/mappingStep';
+import { FormStep } from './types/enums/formStep';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -20,11 +21,11 @@ const App: React.FC = () => {
     (state: RootState) => state.form
   );
 
-  const stepForms = ["formLastNameStep", "addressMailStep", "phoneNumberStep", "addressStep", "confirmationStep"];
-  const iStepArrow = stepForms.includes(step)
+  const stepForms: Array<FormStep> = [FormStep.LastName, FormStep.AddressMail, FormStep.PhoneNumber, FormStep.Address, FormStep.Confirmation];
+  const iStepArrow: boolean = stepForms.includes(step)
 
   const handleArrowClick = () => {
-    const stepPrevious = stepMapping[step].step;
+    const stepPrevious = stepMapping[step].stepPrevious;
     const progressBarPercent = stepMapping[step].percentage;
     dispatch(actions.updateStep(stepPrevious));
     dispatch(actions.updateProgressBar(progressBarPercent))

@@ -1,7 +1,11 @@
+import { FormStep } from "../types/enums/formStep";
+import {ProgressBarPercentage} from "../types/enums/progressBarPercentage";
+import { IStepMapping } from "../types/interfaces/IStepMapping";
+
 export const stepMapping: IStepMapping = {
-    "formLastNameStep": { step: "formFirstNameStep", percentage: 20 },
-    "addressMailStep": { step: "formLastNameStep", percentage: 40 },
-    "phoneNumberStep": { step: "addressMailStep", percentage: 60 },
-    "addressStep": { step: "phoneNumberStep", percentage: 80 },
-    "confirmationStep": { step: "addressStep", percentage: 90 },
+    [FormStep.LastName]: { stepPrevious: FormStep.FirstName, percentage: ProgressBarPercentage.Twenty },
+    [FormStep.AddressMail]: { stepPrevious: FormStep.LastName, percentage: ProgressBarPercentage.Forty },
+    [FormStep.PhoneNumber]: { stepPrevious: FormStep.AddressMail, percentage: ProgressBarPercentage.Sixty },
+    [FormStep.Address]: { stepPrevious: FormStep.PhoneNumber, percentage: ProgressBarPercentage.Eighty },
+    [FormStep.Confirmation]: { stepPrevious: FormStep.Address, percentage: ProgressBarPercentage.Ninety },
 };
