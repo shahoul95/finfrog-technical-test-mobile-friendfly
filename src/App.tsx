@@ -37,7 +37,7 @@ const App: React.FC = () => {
         <Row className="justify-content-center align-items-center pt-5">
           <Col xs="1">
             {iStepArrow && (
-              <Image onClick={handleArrowClick} src={arrow} height="30"></Image>
+              <Image onClick={handleArrowClick} src={arrow} height="30" width="50"></Image>
             )}
           </Col>
           <Col xs={!iStepArrow ? "12" : "11"}>
