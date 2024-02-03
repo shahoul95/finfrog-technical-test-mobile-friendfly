@@ -58,12 +58,12 @@ const RegistrationAddress: React.FC = () => {
         </p>
         <div className='pt-5'>
           {showSuggestions && (
-            <ListGroup className="custom-list-group">
+            <ListGroup className="customListGroup">
               {suggestions.map((suggestion, index) => (
                 <ListGroup.Item
                   key={index}
                   onClick={() => handleSelectSuggestion(suggestion)}
-                  className="custom-list-group-item"
+                  className="customListGroupItem"
                 >
                   <p className='suggestionHover p-2'>
                     {suggestion}

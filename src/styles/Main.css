@@ -1,6 +1,3 @@
-.body {
-  background-color: blue;
-}
 .firstTextCustom {
   color: #212836;
   font-size: 28px;
@@ -48,15 +45,15 @@
  background-color: #EDEEFE;
  color: #CACBFC
 }
-.app-container {
+.appContainer {
   background-color: #F4EADF;
   min-height:100vh;
 }
-.custom-list-group {
+.customListGroup {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.custom-list-group-item {
+.customListGroupItem {
   border: none;
 }
 .suggestionHover:hover {

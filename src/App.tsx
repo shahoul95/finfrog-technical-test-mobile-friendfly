@@ -32,17 +32,17 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className="appContainer">
       <Container>
         <Row className="justify-content-center align-items-center pt-5">
           <Col xs="1">
             {iStepArrow && (
-              <Image onClick={handleArrowClick} src={arrow} height="30" width="50"></Image>
+              <Image onClick={handleArrowClick} src={arrow} height="30" width="30" alt="arrow"></Image>
             )}
           </Col>
           <Col xs={!iStepArrow ? "12" : "11"}>
             {step !== 'confirmationStep' && (
-              <ProgressBar className="customProgressBar" now={progressBarPercent} />
+              <ProgressBar className="customProgressBar" now={progressBarPercent} role="progressbar" />
             )}
           </Col>
         </Row>
