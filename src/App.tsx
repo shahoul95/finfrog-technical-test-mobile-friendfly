@@ -41,29 +41,29 @@ const App: React.FC = () => {
             )}
           </Col>
           <Col xs={!iStepArrow ? "12" : "11"}>
-            {step !== 'confirmationStep' && (
+            {step !== FormStep.Confirmation && (
               <ProgressBar className="customProgressBar" now={progressBarPercent} role="progressbar" />
             )}
           </Col>
         </Row>
       </Container>
       <Container>
-        {step === 'formFirstNameStep' && (
+        {step === FormStep.FirstName && (
           <RegistrationFirstName />
         )}
-        {step === 'formLastNameStep' && (
+        {step === FormStep.LastName && (
           <RegistrationLastName />
         )}
-        {step === 'addressMailStep' && (
+        {step === FormStep.AddressMail && (
           <RegistrationMail />
         )}
-        {step === 'phoneNumberStep' && (
+        {step === FormStep.PhoneNumber && (
           <RegistrationPhoneNumber />
         )}
-        {step === 'addressStep' && (
+        {step === FormStep.Address && (
           <RegistrationAddress />
         )}
-        {step === 'confirmationStep' && (
+        {step === FormStep.Confirmation && (
           <RegistrationConfirmation />
         )}
       </Container>
